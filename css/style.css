@@ -1,0 +1,739 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #0d0d0d;
+  --tertiary-color: #f6f6f6;
+  --btn-color: #95a986;
+  --text-color: #5e5e5e;
+  --subtitle-color: #95a986;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-50 {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.col-33 {
+  width: 33.33%;
+  padding: 0 15px;
+}
+
+.col-25 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.title1 {
+  font-size: 68px;
+  font-weight: bold;
+}
+
+/* Header Section */
+
+header {
+  padding: 15px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.nav-logo > a {
+  width: 312px;
+}
+
+.nav-logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav,
+.navbar-collapsed,
+.navbar-collapsed > ul,
+.nav-icons > ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapsed {
+  margin-left: auto;
+}
+
+.nav-links {
+  margin-right: 56px;
+  color: var(--primary-color);
+  position: relative;
+}
+
+
+/* For rounded hover effect on nav-link */
+.nav-links::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  position: absolute;
+  top: 120%;
+  left: 40%;
+  display: none;
+}
+
+/* Extra-- For underline hover effect on nav-link*/
+
+.nav-links::after {
+  position: absolute;
+  content: "";
+  height: 1.2px;
+  background: red;
+  width: 100%;
+  left: 0;
+  bottom: -8px;
+  display: none;
+}
+/* -------------------------- */
+
+.nav-links:hover::after {
+  display: block;
+}
+
+.dropdown-menu:hover::after {
+  display: none;
+}
+
+.dropdown-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu > ul {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 10px;
+  background: var(--btn-color);
+  display: none;
+}
+
+.dropdown-link {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.dropdown-menu:hover > ul {
+  display: block;
+}
+
+.nav-icons,
+.cart-icon {
+  color: var(--primary-color);
+}
+
+.search {
+  margin-right: 22px;
+}
+
+.line {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.cart-icon {
+  margin-right: 4px;
+}
+.navbar-toggler {
+  color: var(--primary-color);
+  margin-left: auto;
+  font-size: 1.4rem;
+  display: none;
+}
+
+/* Banner Section */
+
+.banner-sec {
+  padding: 15px 0;
+  background: url(../assets/banner-bg.png) no-repeat center/cover;
+  min-height: 100vh;
+  padding: 56px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-wrpr {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-cntn {
+  background: var(--primary-color);
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 793px;
+}
+
+.title1 {
+  font-size: 68px;
+  font-weight: bold;
+  font-family: "Amiri", sans-serif;
+  text-transform: capitalize;
+}
+
+.primary-btn {
+  padding: 20px 28px;
+  background: var(--btn-color);
+  border-radius: 60px;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.banner-hdr {
+  text-align: center;
+}
+
+.banner-hdr > p {
+  max-width: 621px;
+  margin: 25px auto 35px;
+  color: var(--text-color);
+}
+
+/* About Section */
+
+.about-sec {
+  padding: 50px 0;
+}
+
+.about-row {
+  align-items: center;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.title2 {
+  font-size: 45px;
+  font-family: "Amiri", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.about-cntn {
+  max-width: 550px;
+  line-height: 25px;
+  color: var(--text-color);
+  margin-bottom: 14px;
+}
+
+.about-img-box {
+  display: flex;
+}
+
+.about-img {
+  max-width: 425px;
+  margin-right: 24px;
+}
+
+.about-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-sub-img {
+  max-width: 303px;
+}
+
+.about-sub-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Advantage-Section */
+
+.advntage-sec {
+  padding: 60px 0;
+}
+
+.adv-hdr {
+  text-align: center;
+}
+
+.adv-card {
+  text-align: center;
+}
+
+.card-img {
+  max-width: 111px;
+  margin: 0 auto 32px;
+}
+
+.card-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title3 {
+  font-size: 24px;
+  font-family: "Amiri", sans-serif;
+  text-transform: uppercase;
+}
+
+.adv-card > p {
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+/* Mission Section */
+
+.mission-sec {
+  padding: 60px 0;
+  background-color: var(--tertiary-color);
+}
+
+.mission-row {
+  align-items: center;
+}
+
+.mission-row > .col-50 {
+  margin: 0 auto;
+}
+
+.mission-img-box {
+  max-width: 641px;
+  position: relative;
+}
+
+.mission-img-box > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mission-sub-img {
+  max-width: 326px;
+  padding-top: 7px;
+  padding-left: 7px;
+  border-radius: 35px;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -56px;
+  right: -97px;
+}
+
+.mission-sub-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mission-cntn > p {
+  max-width: 580px;
+}
+
+.right {
+  width: 45%;
+  margin-left: auto;
+}
+
+/* Footer Section */
+
+.footer-sec {
+  padding: 60px 0;
+}
+
+.foot-hdr {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.foot-line {
+  margin-bottom: 15px 0;
+}
+
+.foot-para {
+  max-width: 370px;
+  margin: 20px 0;
+}
+
+#email {
+  width: 300px;
+  border-radius: 60px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: none;
+  border: 1px solid var(--text-color);
+}
+
+.secondary-btn {
+  padding: 20px 30px;
+  color: var(--secondary-color);
+  background: var(--btn-color);
+  border-radius: 60px;
+}
+
+.btn:hover {
+  background-color: var(--tertiary-color);
+  outline: 1px solid var(--secondary-color);
+}
+
+.foot-link {
+  font-size: 15px;
+  color: var(--text-color);
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.foot-link:hover {
+  color: var(--secondary-color);
+}
+
+.social-icon {
+  display: flex;
+}
+
+.social-link {
+  margin-right: 36px;
+}
+
+/* Media Quaries */
+
+@media screen and (max-width: 1400px) {
+  /* Mission Section */
+  .mission-row > .col-50 {
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mission-img-box {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* header section */
+
+  /* header {
+    position: relative;
+  } */
+
+  .navbar-collapsed {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--btn-color);
+  }
+
+  .nav-links {
+    margin: 0 auto 10px;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+  }
+
+  .navbar-collapsed > ul {
+    flex-direction: column;
+  }
+
+  .user-icon,
+  .search,
+  .line {
+    display: none;
+  }
+
+
+
+  .cart-icons {
+    margin-left: auto;
+  }
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  /* Footer Section */
+
+  .foot-row > .col-25 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* Header Section */
+  .nav-logo > a {
+    width: 250px;
+  }
+
+  /* Banner Section */
+
+  .banner-cntn {
+    padding: 30px;
+  }
+
+  .banner-hdr > p {
+    margin: 20px auto;
+  }
+
+  .primary-btn {
+    padding: 18px 24px;
+  }
+
+  .title1 {
+    font-size: 56px;
+  }
+
+  /* About Section */
+
+  .about-row {
+    justify-content: center;
+  }
+
+  .col-50 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+/* 
+  .title2 {
+    font-size: ;
+  } */
+
+  .bnr-hdr {
+    text-align: center;
+  }
+
+  .about-cntn {
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  /* Advantage Section */
+  .adv-row > .col-25 {
+    width: 50%;
+  }
+
+  /* Mission Section */
+  .mission-img-box {
+    max-width: 400px;
+  }
+
+  .mission-sub-img {
+    max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Header Section */
+  .nav-logo > a {
+    width: 230px;
+  }
+
+  /* Banner Section */
+
+  .title1 {
+    font-size: 45px;
+  }
+
+  .banner-hdr > p {
+    margin: 15px auto;
+    font-size: 14px;
+  }
+
+  /* Advantage Section */
+  .adv-row > .col-25 {
+    width: 100%;
+  }
+
+  /* Mission Section */
+  .mission-img-box {
+    max-width: 250px;
+  }
+
+  .mission-sub-img {
+    max-width: 130px;
+    bottom: -56px;
+    right: -97px;
+  }
+
+  /* Footer Section */
+
+  .foot-row > .col-25 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .foot-hdr {
+    font-size: 14px;
+  }
+
+  .footer-cntn {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .foot-para {
+    font-size: 12px;
+  }
+
+  .secondary-btn {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  #email {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .foot-link {
+    font-size: 12px;
+  }
+
+  .social-icon {
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+  .social-link {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Header Section */
+  .nav-logo > a {
+    width: 150px;
+  }
+  .navbar-toggler {
+    font-size: 1rem;
+  }
+
+  .cart-icon {
+    font-size: 12px;
+  }
+
+  .cart-icon > img {
+    width: 12px;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  /* Banner Section */
+
+  .banner-cntn {
+    padding: 20px;
+  }
+
+  .title1 {
+    font-size: 30px;
+  }
+
+  .banner-hdr > p {
+    margin: 10px auto;
+    font-size: 12px;
+  }
+
+  .primary-btn {
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding: 12px 12px;
+  }
+
+  /* About Section */
+
+  .title2 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .about-cntn > p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  /* Advantage Section */
+
+  .adv-card {
+    margin-top: 25px;
+  }
+
+  .card-img {
+    max-width: 80px;
+    margin-bottom: 14px;
+  }
+
+  .title3 {
+    font-size: 16px;
+  }
+
+  .adv-card > p {
+    font-size: 12px;
+  }
+
+  /* Mission Section */
+  .mission-img-box {
+    max-width: 220px;
+  }
+
+  .mission-sub-img {
+    max-width: 110px;
+    bottom: -50px;
+    right: -30px;
+  }
+
+  .mission-cntn > p {
+    font-size: 12px;
+  }
+}
